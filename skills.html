@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills | Tracy Akinyi</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .skill-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .skill-card-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .skill-card h3 {
+      font-family: var(--sans);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+    }
+
+    /* Progress bar for skill levels */
+    .skill-level {
+      margin-top: 1rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .progress-bar {
+      height: 3px;
+      background: var(--border);
+      width: 100%;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transition: width 1s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="page-section" style="padding-top: 8rem;">
+    <p class="section-label">Skills</p>
+    <h2 class="section-title">What I Know</h2>
+
+    <div class="skills-grid">
+
+      <!-- ✏️ EDIT or REMOVE any card. Add more by copying a card block -->
+
+      <div class="skill-card">
+        <div class="skill-card-icon">🌐</div>
+        <h3>Networking</h3>
+        <div class="skill-tags">
+          <span class="tag">TCP/IP</span>
+          <span class="tag">DNS</span>
+          <span class="tag">DHCP</span>
+          <span class="tag">VLANs</span>
+          <span class="tag">Routing & Switching</span>
+          <span class="tag">OSI Model</span>
+        </div>
+        <p class="skill-level">Proficiency</p>
+        <div class="progress-bar"><div class="progress-fill" style="width: 65%"></div></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">🔒</div>
+        <h3>Cybersecurity</h3>
+        <div class="skill-tags">
+          <span class="tag">Firewalls</span>
+          <span class="tag">IDS/IPS</span>
+          <span class="tag">Vulnerability Scanning</span>
+          <span class="tag">SIEM Basics</span>
+          <span class="tag">Network Hardening</span>
+        </div>
+        <p class="skill-level">Proficiency</p>
+        <div class="progress-bar"><div class="progress-fill" style="width: 55%"></div></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">🛠</div>
+        <h3>Tools & Platforms</h3>
+        <div class="skill-tags">
+          <span class="tag blue">Wireshark</span>
+          <span class="tag blue">Nmap</span>
+          <span class="tag blue">Cisco Packet Tracer</span>
+          <span class="tag blue">VirtualBox</span>
+          <span class="tag blue">Kali Linux</span>
+        </div>
+        <p class="skill-level">Proficiency</p>
+        <div class="progress-bar"><div class="progress-fill" style="width: 60%"></div></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">💻</div>
+        <h3>Systems & OS</h3>
+        <div class="skill-tags">
+          <span class="tag blue">Linux (Ubuntu/Kali)</span>
+          <span class="tag blue">Windows Server</span>
+          <span class="tag blue">Bash Scripting</span>
+          <span class="tag blue">Active Directory</span>
+        </div>
+        <p class="skill-level">Proficiency</p>
+        <div class="progress-bar"><div class="progress-fill" style="width: 50%"></div></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">☁️</div>
+        <h3>Cloud & Virtualization</h3>
+        <div class="skill-tags">
+          <span class="tag">VMware</span>
+          <span class="tag">VirtualBox</span>
+          <span class="tag blue">AWS Basics</span>
+          <span class="tag blue">pfSense</span>
+        </div>
+        <p class="skill-level">Proficiency</p>
+        <div class="progress-bar"><div class="progress-fill" style="width: 40%"></div></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">📝</div>
+        <h3>Scripting & Automation</h3>
+        <div class="skill-tags">
+          <span class="tag">Bash</span>
+          <span class="tag blue">Python Basics</span>
+          <span class="tag">PowerShell</span>
+        </div>
+        <p class="skill-level">Proficiency</p>
+        <div class="progress-bar"><div class="progress-fill" style="width: 35%"></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="nav.js"></script>
+</body>
+</html>

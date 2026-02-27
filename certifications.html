@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certifications | Tracy Akinyi</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .certs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+
+    .cert-item {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.2rem 1.5rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .cert-item:hover {
+      border-color: var(--accent);
+      transform: translateX(4px);
+    }
+
+    .cert-icon { font-size: 1.8rem; flex-shrink: 0; }
+
+    .cert-info h4 {
+      font-family: var(--sans);
+      font-weight: 700;
+      color: #fff;
+      font-size: 0.95rem;
+    }
+
+    .cert-info p { font-size: 0.78rem; color: var(--muted); }
+
+    .cert-badge {
+      margin-left: auto;
+      font-size: 0.7rem;
+      flex-shrink: 0;
+    }
+
+    .cert-badge a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .cert-badge a:hover { border-color: var(--accent); }
+
+   
+    .cert-status {
+      font-size: 0.65rem;
+      padding: 0.15rem 0.5rem;
+      border: 1px solid;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    .cert-status.earned  { border-color: var(--accent);  color: var(--accent); }
+    .cert-status.progress{ border-color: var(--accent2); color: var(--accent2); }
+    .cert-status.planned { border-color: var(--muted);   color: var(--muted); }
+
+    /* Platform section */
+    .platform-section { margin-top: 2rem; }
+
+    .platform-title {
+      font-family: var(--sans);
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <section class="page-section" style="padding-top: 8rem;">
+    <p class="section-label"> Certifications</p>
+    <h2 class="section-title">Credentials</h2>
+
+   
+
+    <div class="certs-list">
+
+      <div class="cert-item">
+        <div class="cert-icon">🏅</div>
+        <div class="cert-info">
+          <h4>CompTIA Network+</h4>
+          <p>CompTIA · Planned</p>
+        </div>
+        <span class="cert-status planned">Planned</span>
+        <!-- Once earned, change to: <span class="cert-status earned">Earned</span> -->
+        <!-- And add: <div class="cert-badge"><a href="YOUR_CREDLY_LINK">→ Verify</a></div> -->
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-icon">🏅</div>
+        <div class="cert-info">
+          <h4>CompTIA Security+</h4>
+          <p>CompTIA · Planned</p>
+        </div>
+        <span class="cert-status planned">Planned</span>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-icon">🏅</div>
+        <div class="cert-info">
+          <h4>Cisco CCNA</h4>
+          <p>Cisco · Planned</p>
+        </div>
+        <span class="cert-status planned">Planned</span>
+      </div>
+
+    </div>
+
+    <!-- ONLINE PLATFORM ACHIEVEMENTS -->
+    <div class="platform-section">
+      <p class="platform-title">Platform Achievements</p>
+      <div class="certs-list">
+
+        <div class="cert-item">
+          <div class="cert-icon">🎯</div>
+          <div class="cert-info">
+            <h4>TryHackMe — Pre-Security Path</h4>
+            <p>TryHackMe · Planned</p>
+          </div>
+          <span class="cert-status progress">In Progress</span>
+          <div class="cert-badge"><a href="https://tryhackme.com/p/tracyowira24?tab=yearly-activity">→ Profile</a></div>
+        </div>
+
+        <div class="cert-item">
+          <div class="cert-icon">🎯</div>
+          <div class="cert-info">
+            <h4>HackTheBox — Starting Point</h4>
+            <p>HackTheBox · Planned</p>
+          </div>
+          <span class="cert-status planned">Planned</span>
+        </div>
+
+        <div class="cert-item">
+          <div class="cert-icon">🎓</div>
+          <div class="cert-info">
+            <h4>Cisco Networking Basics (NetAcad)</h4>
+            <p>Cisco Networking Academy · January 2026</p>
+          </div>
+          <span class="cert-status progress">In Progress</span>
+          <div class="cert-badge"><a href="https://www.netacad.com/launch?id=ede6cdee-3d0a-45bb-963c-eac68d24d518&tab=curriculum&view=dcf626d7-d994-5231-8be5-e4369ffd633e">→ Profile</a></div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <script src="nav.js"></script>
+</body>
+</html>

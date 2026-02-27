@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Tracy Akinyi</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      transition: all 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Colored top bar on hover */
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      border-color: rgba(0,255,136,0.3);
+      transform: translateY(-4px);
+    }
+
+    .project-card:hover::before { transform: scaleX(1); }
+
+    .project-status {
+      display: inline-block;
+      font-size: 0.65rem;
+      padding: 0.15rem 0.5rem;
+      border: 1px solid var(--danger);
+      color: var(--danger);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .project-status.live {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .project-card h3 {
+      font-family: var(--sans);
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .project-links a {
+      font-size: 0.75rem;
+      color: var(--accent2);
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .project-links a:hover { border-color: var(--accent2); }
+
+    .no-projects {
+      color: var(--muted);
+      font-size: 0.88rem;
+      padding: 2rem;
+      border: 1px dashed var(--border);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="page-section" style="padding-top: 8rem;">
+    <p class="section-label">Projects</p>
+    <h2 class="section-title">What I've Built</h2>
+
+    <div class="projects-grid">
+
+      <!--
+        ✏️ HOW TO ADD A PROJECT:
+        Copy one of the cards below, paste it, and fill in your details.
+
+        project-status options:
+          class="project-status live"    → shows green "Completed"
+          class="project-status"         → shows red "In Progress"
+      -->
+
+      <div class="project-card">
+        <span class="project-status ">In Progress</span>
+        <h3>Home Lab Network Setup</h3>
+        <p>
+          Built a virtualized home lab using VirtualBox to simulate a small enterprise
+          network with multiple VLANs, a pfSense firewall, and a Windows Active
+          Directory domain controller.
+        </p>
+        <div class="skill-tags">
+          <span class="tag">pfSense</span>
+          <span class="tag red">VirtualBox</span>
+          <span class="tag">Active Directory</span>
+        </div>
+        <div class="project-links">
+          <!-- Replace # with actual URLs-->
+          <a href="#">→ View Write-up</a>
+          <a href="#">→ GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="project-status">In Progress</span>
+        <h3>Network Packet Analysis</h3>
+        <p>
+          Captured and analyzed live traffic using Wireshark to identify anomalies,
+          unsecured protocols, and simulated a basic man-in-the-middle attack in a
+          controlled lab environment.
+        </p>
+        <div class="skill-tags">
+          <span class="tag red">Wireshark</span>
+          <span class="tag">TCP/IP</span>
+          <span class="tag">Kali Linux</span>
+        </div>
+        <div class="project-links">
+          <a href="#">→ View Write-up</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="project-status">In Progress</span>
+        <h3>CTF Challenges Journal</h3>
+        <p>
+          Documenting my solutions and thought processes for Capture the Flag
+          competitions on TryHackMe and HackTheBox. Focused on network forensics
+          and privilege escalation.
+        </p>
+        <div class="skill-tags">
+          <span class="tag">TryHackMe</span>
+          <span class="tag blue">HackTheBox</span>
+          <span class="tag">Nmap</span>
+        </div>
+        <div class="project-links">
+          <a href="#">→ View Journal</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="project-status live">Completed</span>
+        <h3>Cisco Network Topology Design</h3>
+        <p>
+          Designed and simulated a multi-site corporate network in Cisco Packet
+          Tracer with redundant links, inter-VLAN routing, and OSPF dynamic
+          routing protocol.
+        </p>
+        <div class="skill-tags">
+          <span class="tag blue">Packet Tracer</span>
+          <span class="tag">OSPF</span>
+          <span class="tag">VLANs</span>
+        </div>
+        <div class="project-links">
+          <a href="#">→ View Diagram</a>
+          <a href="#">→ GitHub</a>
+        </div>
+      </div>
+
+      <!--
+        Don't have projects yet? That's okay!
+        You can temporarily show this placeholder and fill it in later.
+
+        <div class="no-projects">
+          <p>More projects coming soon. Currently building in the lab! 🔧</p>
+        </div>
+      -->
+
+    </div>
+  </section>
+
+  <script src="nav.js"></script>
+</body>
+</html>

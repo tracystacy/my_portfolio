@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me | Tracy Akinyi</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .stat-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+
+    .stat-box:hover { border-color: var(--accent); }
+
+    .stat-number {
+      font-family: var(--sans);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 0.3rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="page-section" style="padding-top: 8rem;">
+    <p class="section-label">About Me</p>
+    <h2 class="section-title">Who I Am</h2>
+
+    <div class="about-grid">
+      <div class="about-text">
+
+        
+        <p>
+          Hi! I'm Tracy Akinyi, a 2nd Year student studying
+          Information Technology at Maseno University
+          I'm passionate about cybersecurity and networking — specifically
+          how to design, secure, and troubleshoot complex systems.
+        </p>
+        <p>
+          Currently learning through hands-on labs, home lab setups, and
+          industry certifications. I'm actively seeking 
+          opportunities where I can apply my skills in real-world environments.
+        </p>
+        <p>
+         In my spare time, I follow cybersecurity news, study for certifications, and watch writeups and walkthroughs to deepen my understanding of real-world attack and defense scenarios.
+        </p>
+        <br/>
+
+        
+        <a href="resume.docx" class="btn" download>Download Resume</a>
+      </div>
+
+      <div class="about-stats">
+        
+        <div class="stat-box">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">CTF Challenges</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Years Studying</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="nav.js"></script>
+</body>
+</html>
